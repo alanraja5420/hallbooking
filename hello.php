@@ -9,5 +9,13 @@
 <body>
     <h1>Simon hi</h1>
     <h2>Alan</h2>
+    <?php
+    $num1=10;
+    $num2=11;
+    $num3 = $num1+$num2;
+    echo $num3;
+    
+    ?>
+    <h1></h1>
 </body>
 </html>
