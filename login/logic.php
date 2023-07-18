@@ -7,6 +7,9 @@ if(isset($_POST["submit"])){
     if($st->num_rows ==1){
         $_SESSION['user']=$user;
         header("location:..\Dashboard\index.php");
+    }else{
+        $_SESSION['alert']="invalid pass or user";
+        header("location:login.php");
     }
 }
 ?>
