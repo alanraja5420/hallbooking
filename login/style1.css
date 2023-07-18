@@ -6,7 +6,7 @@
 }
 
 body{
-    background-image: url(bac5.jpg);
+    background-image: url(/images/bac5.jpg);
     background-size: cover;
     width: 400px;
     height: 400px;
@@ -28,7 +28,7 @@ body{
 .left{
     width: 800px;
     height: 496px;
-    background: url(2.jpg );
+    background: url(/images/2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;  
