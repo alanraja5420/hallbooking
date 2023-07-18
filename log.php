@@ -11,7 +11,7 @@
 
         }
         body{
-            background-image:url(sjc.jpeg);
+            background-image:url(images/sjc3.jpeg);
             background-position: center;
             background-size: cover;
             font-family: sans-serif;
@@ -21,8 +21,8 @@
 
         }
         .regform{
-            width: 800px;
-            background-color: rgb(0,0,0,0.6);
+            width: 550px;
+            background-color: rgb(0,0,0,0.8);
             margin: auto;
             color:#FFFFFF;
             padding: 10px 0px 10px 0px;
@@ -32,9 +32,9 @@
 
         }
         .main{
-            background-color: rgb(0,0,0,0.5);
-            width: 800px;
-            height: 500px;
+            background-color: rgb(0,0,0,0.7);
+            width: 550px;
+            height: 470px;
 
             margin: auto;
             
@@ -46,37 +46,48 @@
         }
 
     #name{
-        width: 100%;
+        width: 100px;
         height: 100px;
 
     }
-    .name{
-        margin-left: 25px;
-        margin-top: 50px;
+    .name1{
+        margin-left: 70px;
+        margin-top: 100px;
         width: 125px;
         color:#FFFFFF;
-        font-size: 18px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .name{
+        margin-left: 70px;
+        margin-top: -10px;
+        width: 125px;
+        color:#FFFFFF;
+        font-size: 20px;
         font-weight: 700;
 
     }
     .username{
         position: relative;
-        margin-top: 100px;
-        left: 400px;
-        top: -37px;
-        line-height: 40px;
-        border-radius: 6px;
+        margin-top: 50px;
+        left: 250px;
+        top:-80px;
+        line-height: 37px;
+        width: 175px;
+        border-radius: 14px;
         padding: 0 22px;
         font-size: 16px;
-
+        color:#555;
     }
     .password{
         position: relative;
         margin-top: 50px;
-        left: 400px;
+        left: 250px;
         top:-80px;
-        line-height: 40px;
-        border-radius: 6px;
+        line-height: 37px;
+        width: 175px;
+        border-radius: 14px;
         padding: 0 22px;
         font-size: 16px;
         color:#555;
@@ -85,8 +96,13 @@
         background-color: #3BAF9F;
         display: block;
         margin: 20px 0px 0px 20px;
+        margin-left: 150px;
+        margin-top: -19px;
         text-align: center;
-        border-radius: 12px;
+        border-radius: 19px;
+        line-height: 10px;
+        width: 175px;
+        font-size: 17px;
         border: 2px solid #366473;
         padding: 14px 110px;
         outline: none;
@@ -118,7 +134,7 @@
 
         <form>
         <div id="name">
-            <h2 class="name">UserName</h2>
+            <h2 class="name1">UserName</h2>
             <input class="username" type="text" name="user_name"><br>
             <h2 class="name">Password</h2>
             <input class="password" type="text" name="pass_word"><br>

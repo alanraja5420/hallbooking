@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: url(bac1.jpg);
+    background-size: cover;
+    
+}
+.container{
+    border: 2px solid rgb(11, 6, 6);
+    width: 500px;
+    height: 700px;
+    margin: 10% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+}
+
+.left{
+    width: 10px;
+    height: 696px;
+    background: url(sjc1.jpg );
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;  
+    border-radius: 1.5rem 0 0 1.5rem;
+    
+}
+
+.right{
+    width: 600px;
+    height: 696px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white; 
+    border-radius:0 1.5rem 1.5rem 0;
+    
+}
+
+h1{
+    text-align: left;
+    width: 400px;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: black;
+}
+
+input{
+    width: 400px;
+    padding: 1rem 0rem;
+    margin: .7rem;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid rgb(184, 4, 4);
+    font-size: 1rem;
+
+}
+
+button{
+    width: 400px;
+    padding: 1rem;
+    border: none;
+    outline: black;
+    outline-color: black;
+    margin: .7rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+button:hover{
+    transform: scale(0.96);
+}
+
+.continue{
+    background: linear-gradient(to right,rgb(239, 9, 21),rgba(167, 6, 19, 0.623) );
+    color: white;
+    letter-spacing: 2px;
+}
+
+
+.one{
+    color: white;
+    text-align: center;
+    margin-top: 10rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.7rem;
+}
