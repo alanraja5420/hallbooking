@@ -36,7 +36,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="../booking/bookingform.php">
                     <i class="fas fa-briefcase"></i>
                     <span> Booking </span>
                 </a>

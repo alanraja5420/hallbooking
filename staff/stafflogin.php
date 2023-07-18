@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=""en">
+<html lang="en">
  <head>
     <meta charset="UTF-8"/>
     <title> Dashboard </title>
@@ -36,10 +36,12 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                    <a href="bookingform.php">
                     <i class="fas fa-briefcase"></i>
                     <span> Booking </span>
-                </a>
+                    </a>
+                </form>
+                
             </li>
             <li>
                 <a href="#">
