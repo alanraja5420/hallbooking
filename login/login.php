@@ -18,9 +18,12 @@
         <h3>(Autonomous)</h3>
         <h4>Tiruchirappalli - 02</h4>
             <h1>Login Here</h1>
+            <form action="logic.php" method="POST">
             <input type="username" name="user" id="user" placeholder="Username">
             <input type="password" name="pass" id="pass" placeholder="Password">
-            <button class="continue">CONTINUE</button>
+            <button class="continue" name="submit">CONTINUE</button>
+            </form>
+            
             <h5> <link rel="pass" href=""> Forgot Password?</h5>
         </div>   
     </div>
