@@ -21,7 +21,7 @@ include("../database/connection.php");
     }
     elseif($row["usertype"]=="staff")
     {
-        header("location:..\staff\stafflogin.php");
+        header("location:..\Secretary\Dashboard.php");
     }
     else
     {
