@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css"/>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
     <div class="sidebar">
@@ -17,12 +20,6 @@
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class="fas fa-user"></i>
-                    <span> Profile </span>
-                </a>
-            </li>
-            <li>
                 <a href="Halls.php">
                     <i class="fas fa-chart-bar"></i>
                     <span> Halls </span>
@@ -31,13 +28,13 @@
             <li>
                 <a href="../booking/bookingform.php">
                     <i class="fas fa-briefcase"></i>
-                    <span> Booking </span>
+                    <span> Request </span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <i class="fas fa-star"></i>
-                    <span> Status </span>
+                    <span> Approved </span>
                 </a>
             </li>
             <li class="logout">
