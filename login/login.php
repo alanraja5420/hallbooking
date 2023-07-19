@@ -13,7 +13,7 @@
             <div class="one"></div>       
         </div>
         <div class="right">
-        <img src="logo.png" alt="Girl in a jacket" width="85" height="120" >
+        <img src="logo.png" alt="Girl in a jacket" width="100" height="150" >
         <h2>St.Joseph's College</h2>
         <h3>(Autonomous)</h3>
         <h4>Tiruchirappalli - 02</h4>

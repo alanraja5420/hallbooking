@@ -1,15 +1,31 @@
 <?php
 include("../database/connection.php");
-if(isset($_POST["submit"])){
-    $user=$_POST['user'];
-    $pass=$_POST['pass'];
-    $st=mysqli_query($conn,"select * from  login where username='$user' and password='$pass'");
-    if($st->num_rows ==1){
-        $_SESSION['user']=$user;
-        header("location:..\Dashboard\index.php");
-    }else{
-        $_SESSION['alert']="invalid pass or user";
-        header("location:login.php");
+    if($conn===false)
+    {
+    die("connection error");
     }
-}
+
+    if($_SERVER["REQUEST_METHOD"]=="POST")
+    {
+    $name = $_POST['user'];
+    $pass = $_POST['pass'];
+
+    $sql="select * from login where user='".$name. "' AND pass='".$pass. "'";
+
+    $result=mysqli_query($conn,$sql);
+    $row=mysqli_fetch_array($result);
+
+    if($row["usertype"]=="Botany")
+    {
+        header("location:..\Dashboard\index.php");
+    }
+    elseif($row["usertype"]=="computer")
+    {
+        header("location:..\staff\stafflogin.php");
+    }
+    else
+    {
+        echo "Username or Password do not match";
+    }
+    }
 ?>
