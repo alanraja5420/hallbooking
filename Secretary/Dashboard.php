@@ -60,7 +60,7 @@
            <i class="fa-solid fa-search"></i>
            <input type="text" placeholder="search"/>
          </div>
-         <img src="./sjc.png" alt=""/>
+         <img src="../Asset/sjc.png" alt=""/>
        </div>
        </div> 
     </div>

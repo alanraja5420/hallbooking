@@ -41,7 +41,7 @@
                 </a>
             </li>
             <li class="logout">
-                <a href="#">
+                <a href="../login/login.php">
                     <i class="fas fa-sign-out-alt"></i>
                     <span> Logout </span>
                 </a>
@@ -60,7 +60,7 @@
            <i class="fa-solid fa-search"></i>
            <input type="text" placeholder="search"/>
          </div>
-         <img src="./sjc.png" alt=""/>
+         <img src="../Asset/sjc.png" alt=""/>
        </div>
        </div> 
     </div>
