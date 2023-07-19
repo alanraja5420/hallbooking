@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 18, 2023 at 06:02 PM
+-- Generation Time: Jul 19, 2023 at 06:14 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -29,15 +29,17 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `login` (
   `username` varchar(30) NOT NULL,
-  `password` varchar(20) NOT NULL
+  `password` varchar(20) NOT NULL,
+  `usertype` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `login`
 --
 
-INSERT INTO `login` (`username`, `password`) VALUES
-('cs', '123');
+INSERT INTO `login` (`username`, `password`, `usertype`) VALUES
+('bo', '123', 'Botany '),
+('cs', '123', 'computer');
 
 --
 -- Indexes for dumped tables
