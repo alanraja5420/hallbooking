@@ -10,16 +10,16 @@ include("../database/connection.php");
     $name = $_POST['user'];
     $pass = $_POST['pass'];
 
-    $sql="select * from login where user='".$name. "' AND pass='".$pass. "'";
+    $sql="select * from login where username='$name' AND password='$pass'";
 
     $result=mysqli_query($conn,$sql);
     $row=mysqli_fetch_array($result);
 
-    if($row["usertype"]=="Botany")
+    if($row["usertype"]=="Dashboard")
     {
         header("location:..\Dashboard\index.php");
     }
-    elseif($row["usertype"]=="computer")
+    elseif($row["usertype"]=="staff")
     {
         header("location:..\staff\stafflogin.php");
     }
