@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hall Booking Form</title>
-</head>
-<body>
-  <h2>Hall Booking Form</h2>
 
+</head>
+<body style="background-color:tomato;">
+ 
+  <h1 style="text-align:center">SJC HALLS</h1>  
+
+  <h2>Hall Booking Form</h2>
+  
+    
+ 
   <?php
   // Check if the form is submitted
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve the form data
-    $name = $_POST['name'];
-    $email = $_POST['email'];
+    $Department_name = $_POST['name'];
+    $Hall_name = $_POST['email'];
     $date = $_POST['date'];
     $startTime = $_POST['start_time'];
     $endTime = $_POST['end_time'];
@@ -20,7 +25,7 @@
     // Validate the form data
     $errors = [];
 
-    if (empty($name) || empty($email) || empty($date) || empty($startTime) || empty($endTime) || empty($description)) {
+    if (empty( $Department_name) || empty( $Hall_name ) || empty($date) || empty($startTime) || empty($endTime) || empty($description)) {
       $errors[] = "Please fill in all the fields.";
     }
 
@@ -61,8 +66,8 @@
 
       // Display a success message
       echo "<p>Your hall booking has been confirmed.</p>";
-      echo "<p>Name: $name</p>";
-      echo "<p>Email: $email</p>";
+      echo "<p>Department_Name: $Department_name</p>";
+      echo "<p>Hall_name:  $Hall_name /p>";
       echo "<p>Date: $date</p>";
       echo "<p>Start Time: $startTime</p>";
       echo "<p>End Time: $endTime</p>";
@@ -72,11 +77,11 @@
   ?>
 
   <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    <label for="name">Name:</label>
+    <label for="Department_name">Department_Name:</label>
     <input type="text" id="name" name="name" required><br><br>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br><br>
+    <label for="Hall_name">Hall_name:</label>
+    <input type="Hall_name" id="Hall_name" name="Hall_name" required><br><br>
 
     <label for="date">Date:</label>
     <input type="date" id="date" name="date" required><br><br>
