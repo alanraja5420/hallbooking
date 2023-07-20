@@ -64,7 +64,7 @@
       <div class="form-label">
         <label for="Department_name">
           Department Name:
-          <select  id="name" name="Department_name" class="form-input" required>
+          <select  id="name" name="Department_Name" class="form-input" required>
           <option value="">Department_Name</option>
           <option value="cs">cs</option>
             <option value="phy">phy</option>
@@ -80,7 +80,7 @@
       <div class="form-label">
         <label for="Hall_name">
           Hall Name:
-          <select id="Hall_name" name="Hall_name" class="form-input" required>
+          <select id="Hall_name" name="Hall_Name" class="form-input" required>
             <option value="">Select a Hall</option>
             <option value="Lawley Hall">Lawley Hall</option>
             <option value="KP Joseph Hall">KP Joseph Hall</option>
@@ -97,21 +97,21 @@
       <div class="form-label">
         <label for="date">
           Date:
-          <input type="date" id="date" name="date" class="form-input" required>
+          <input type="date" id="date" name="Date" class="form-input" required>
         </label>
       </div>
 
       <div class="form-label">
         <label for="start_time">
           Start Time:
-          <input type="time" id="start_time" name="start_time" class="form-input" required>
+          <input type="time" id="start_time" name="Start_Time" class="form-input" required>
         </label>
       </div>
 
       <div class="form-label">
         <label for="end_time">
           End Time:
-          <input type="time" id="end_time" name="end_time" class="form-input" required>
+          <input type="time" id="end_time" name="End_Time" class="form-input" required>
         </label>
       </div>
 
@@ -122,8 +122,26 @@
         </label>
       </div>
 
-      <input type="submit" value="Book Hall">
+      <input type="submit" name="Book_Hall" value="Book_Hall">
     </form>
   </div>
 </body>
 </html>
+<?php
+if(isset($_POST['Book_Hall']))
+{
+  include('../database/connection.php');
+  $Department_Name = $_POST['Department_Name'];
+  $Hall_Name = $_POST['Hall_Name'];
+  $Date = $_POST['Date'];
+  $Start_Time = $_POST['Start_Time'];
+  $End_Time = $_POST['End_Time'];
+  $purpose = $_POST['purpose'];
+
+  $query ="INSERT INTO booking_form (Department_Name,Hall_Name,Date,Start_Time,End_Time,purpose) VALUES('$Department_Name','$Hall_Name','$Date','$Start_Time','$End_Time','$purpose')";
+  if($conn->query($query)){
+    echo 'data inserted';
+  }
+  
+}
+?>
