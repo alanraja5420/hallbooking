@@ -20,7 +20,7 @@ include("../database/connection.php");
 
     if($row["usertype"]=="Dashboard")
     {
-        header("location:..\Dashboard\index.php");
+        header("location:..\User\Dashboard.php");
     }
     elseif($row["usertype"]=="secretary")
     {

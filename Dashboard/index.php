@@ -3,7 +3,7 @@
            if($_SESSION['user']){
          ?>
 <!DOCTYPE html>
-<html lang=""en">
+<html lang="en">
  <head>
     <meta charset="UTF-8"/>
     <title> Dashboard </title>
@@ -75,7 +75,10 @@
             
             $name = $_SESSION['user'];
          ?>
-         <p><?php echo $name?></p>
+         <p>
+            <?php 
+            echo $name?>
+            </p>
          <img src="./sjc.png" alt=""/>
        </div>
        </div> 
