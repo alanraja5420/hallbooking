@@ -1,5 +1,7 @@
 <?php
+session_start();
 include("../database/connection.php");
+
     if($conn===false)
     {
     die("connection error");
@@ -7,9 +9,10 @@ include("../database/connection.php");
 
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {
+    
     $name = $_POST['user'];
     $pass = $_POST['pass'];
-
+    $_SESSION['user'] = $name;
     $sql="select * from login where username='$name' AND password='$pass'";
 
     $result=mysqli_query($conn,$sql);
