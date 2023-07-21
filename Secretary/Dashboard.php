@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li>
-                <a href="../booking/bookingform.php">
+                <a href="../Approved.php">
                     <i class="fas fa-briefcase"></i>
                     <span> Request </span>
                 </a>
@@ -53,9 +53,11 @@
         <h2> Dashboard </h2>
        </div>
        <div class="user--info">
-         <div class="search--box">
-           <i class="fa-solid fa-search"></i>
-           <input type="text" placeholder="search"/>
+         <div class="search--info">
+            <div class="sc">
+              <span> Secretary </span>
+              <h5> Amal <h5>
+            </div>
          </div>
          <img src="../Asset/sjc.png" alt=""/>
        </div>

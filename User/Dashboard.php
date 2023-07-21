@@ -20,27 +20,21 @@
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class="fas fa-user"></i>
-                    <span> Profile </span>
-                </a>
-            </li>
-            <li>
                 <a href="Halls.php">
                     <i class="fas fa-chart-bar"></i>
                     <span> Halls </span>
                 </a>
             </li>
             <li>
-                <a href="../booking/bookingform.php">
+                <a href="../Approved.php">
                     <i class="fas fa-briefcase"></i>
-                    <span> Booking </span>
+                    <span> Request </span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <i class="fas fa-star"></i>
-                    <span> Status </span>
+                    <span> Approved </span>
                 </a>
             </li>
             <li class="logout">
@@ -59,9 +53,11 @@
         <h2> Dashboard </h2>
        </div>
        <div class="user--info">
-         <div class="search--box">
-           <i class="fa-solid fa-search"></i>
-           <input type="text" placeholder="search"/>
+         <div class="search--info">
+            <div class="sc">
+              <span> CS </span>
+              <h5> Hod <h5>
+            </div>
          </div>
          <img src="../Asset/sjc.png" alt=""/>
        </div>
