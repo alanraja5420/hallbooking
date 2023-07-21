@@ -26,13 +26,13 @@
                 </a>
             </li>
             <li>
-                <a href="../booking/bookingform.php">
+                <a href="Request.php">
                     <i class="fas fa-briefcase"></i>
                     <span> Request </span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="Approved.php">
                     <i class="fas fa-star"></i>
                     <span> Approved </span>
                 </a>
