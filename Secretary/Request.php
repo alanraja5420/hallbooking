@@ -50,6 +50,9 @@
   </style>
 </head>
 <body>
+    <?php 
+    
+    ?>
   <h1>Hall Booking Requests </h1>
 
   <table>
