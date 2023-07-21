@@ -26,13 +26,17 @@
                 </a>
             </li>
             <li>
+<<<<<<< HEAD
                 <a href="../Approved.php">
+=======
+                <a href="Request.php">
+>>>>>>> 14087d6fa9d1ff2a35740c009121ee1cefb771a0
                     <i class="fas fa-briefcase"></i>
                     <span> Request </span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="Approved.php">
                     <i class="fas fa-star"></i>
                     <span> Approved </span>
                 </a>

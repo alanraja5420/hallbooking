@@ -1,3 +1,7 @@
+<?php
+            session_start();
+           if($_SESSION['user']){
+         ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,10 +63,13 @@
               <h5> Amal <h5>
             </div>
          </div>
-         <img src="../Asset/sjc.png" alt=""/>
+         <img src="./sjc.png" alt=""/>
        </div>
        </div> 
     </div>
  </body>
+
+
+
 
 </html>
