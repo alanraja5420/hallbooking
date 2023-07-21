@@ -1,3 +1,7 @@
+<?php
+            session_start();
+           if($_SESSION['user']){
+         ?>
 <!DOCTYPE html>
 <html lang=""en">
  <head>
@@ -67,13 +71,22 @@
            <i class="fa-solid fa-search"></i>
            <input type="text" placeholder="search"/>
          </div>
+         <?php
+            
+            $name = $_SESSION['user'];
+         ?>
+         <p><?php echo $name?></p>
          <img src="./sjc.png" alt=""/>
        </div>
        </div> 
     </div>
  </body>
 
-
+<?php
+           }else{
+            header("location:../login/login.php");
+           }
+?>
 
 
 </html>
