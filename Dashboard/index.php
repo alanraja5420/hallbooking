@@ -75,10 +75,7 @@
             
             $name = $_SESSION['user'];
          ?>
-         <p>
-            <?php 
-            echo $name?>
-            </p>
+         <p><?php echo $name?></p>
          <img src="./sjc.png" alt=""/>
        </div>
        </div> 
