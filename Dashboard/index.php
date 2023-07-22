@@ -2,6 +2,7 @@
             session_start();
            if($_SESSION['user']){
          ?>
+         
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -74,6 +75,7 @@
          <?php
             
             $name = $_SESSION['user'];
+
          ?>
          <p><?php echo $name?></p>
          <img src="./sjc.png" alt=""/>

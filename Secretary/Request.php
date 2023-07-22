@@ -1,3 +1,9 @@
+<?php
+include("..\database\connection.php");
+$query = "SELECT * FROM booking_form";
+$result = mysqli_query($conn, $query);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +20,9 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
+      border-radius: 5px;
+      border-color: black;
+      
     }
     th, td {
       padding: 10px;
@@ -47,54 +56,44 @@
       color: white;
       border: none;
     }
-  </style>
+    </style>
 </head>
 <body>
-    <?php 
-    
-    ?>
-  <h1>Hall Booking Requests </h1>
+  <h1>Hall Booking Requests</h1>
 
   <table>
     <tr>
+      <th>Application No</th>
+      <th>Department Name</th>
       <th>Hall Name</th>
-      <th>Department_Name</th>
-      <th>Booking Date</th>
-      <th>Status</th>
+      <th>Date</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Purpose</th>
       <th>Action</th>
     </tr>
-    <tr>
-      <td>Hall A</td>
-      <td>John Doe</td>
-      <td>2023-07-25</td>
-      <td>Pending</td>
-      <td class="action-buttons">
-        <button class="approve-button" onclick="approveBooking(1)">Approve</button>
-        <button class="reject-button" onclick="rejectBooking(1)">Reject</button>
-      </td>
-    </tr>
-    <!-- Repeat the above row structure for other booking requests -->
+    <?php
+    while ($row = mysqli_fetch_assoc($result)) {
+    ?>
+      <tr>
+        <td><?php echo $row['Application_no']; ?></td>
+        <td><?php echo $row['Department_Name']; ?></td>
+        <td><?php echo $row['Hall_Name']; ?></td>
+        <td><?php echo $row['Date']; ?></td>
+        <td><?php echo $row['Start_Time']; ?></td>
+        <td><?php echo $row['End_Time']; ?></td>
+        <td><?php echo $row['purpose']; ?></td>
+        <td class="action-buttons">
+          <button class="approve-button" onclick="approveBooking(<?php echo $row['Application_no']; ?>)">Approve</button>
+          <button class="reject-button" onclick="rejectBooking(<?php echo $row['Application_no']; ?>)">Reject</button>
+        </td>
+      </tr>
+    <?php
+    }
+    ?>
   </table>
 
   <!-- JavaScript code to handle approval and rejection -->
-  <script>
-    function approveBooking(bookingId) {
-      // Call a server-side API or AJAX function to handle approval
-      // Example: Use fetch() to send a request to the server
-      fetch(`/approve_booking.php?id=${bookingId}`, { method: 'POST' })
-        .then(response => response.text())
-        .then(message => alert(message))
-        .catch(error => console.error(error));
-    }
-
-    function rejectBooking(bookingId) {
-      // Call a server-side API or AJAX function to handle rejection
-      // Example: Use fetch() to send a request to the server
-      fetch(`/reject_booking.php?id=${bookingId}`, { method: 'POST' })
-        .then(response => response.text())
-        .then(message => alert(message))
-        .catch(error => console.error(error));
-    }
-  </script>
+  <!-- ... Your JavaScript code ... -->
 </body>
 </html>
