@@ -14,7 +14,10 @@ $result = mysqli_query($conn, $query);
     }
     h1 {
       text-align: center;
-      margin: 20px 0;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      color: #cc0000;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
     table {
       width: 100%;

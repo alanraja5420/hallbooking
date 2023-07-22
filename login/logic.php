@@ -26,9 +26,13 @@ include("../database/connection.php");
     {
         header("location:..\Secretary\Dashboard.php");
     }
+    elseif($row["usertype"]=="VP")
+    {
+        header("location:..\vp\Dashboard.php");
+    }
     else
     {
         echo "Username or Password do not match";
     }
-    }
+}
 ?>
