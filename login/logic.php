@@ -28,7 +28,7 @@ include("../database/connection.php");
     }
     elseif($row["usertype"]=="VP")
     {
-        header("location:..\vp\Dashboard.php");
+        header("location:..\Vice\Dashboard.php");
     }
     else
     {
