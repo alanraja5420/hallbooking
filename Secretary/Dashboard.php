@@ -35,9 +35,9 @@
                 </a>
             </li>
             <li>
-                <a href="Approved.php">
+                <a href="Status.php">
                     <i class="fas fa-star"></i>
-                    <span> Approved </span>
+                    <span> Status </span>
                 </a>
             </li>
             <li class="logout">
