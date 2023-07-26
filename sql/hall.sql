@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 26, 2023 at 06:05 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Jul 26, 2023 at 07:54 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -43,8 +43,11 @@ CREATE TABLE `booking_form` (
 --
 
 INSERT INTO `booking_form` (`Application_no`, `Department_Name`, `Hall_Name`, `Date`, `Start_Time`, `End_Time`, `purpose`, `status`) VALUES
-(31, 'mat', 'Sail auditorium', '2023-07-11', '22:56:00', '22:57:00', 'kmkjlk', 3),
-(56, 'tamil', 'MCA Seminar Hall', '2023-07-06', '23:55:00', '23:55:00', 'summa', 3);
+(31, 'mat', 'Sail auditorium', '2023-07-11', '22:56:00', '22:57:00', 'kmkjlk', 1),
+(56, 'tamil', 'MCA Seminar Hall', '2023-07-06', '23:55:00', '23:55:00', 'summa', 3),
+(57, 'phy', 'Lawley Hall', '2023-06-26', '01:14:00', '01:14:00', 'hkjhk', 3),
+(58, 'che', 'Lawley Hall', '2023-07-27', '22:15:00', '22:15:00', 'lolop', 2),
+(59, 'cs', 'KP Joseph Hall', '2023-07-21', '02:16:00', '01:16:00', 'kjiiuoi', 2);
 
 -- --------------------------------------------------------
 
@@ -55,17 +58,20 @@ INSERT INTO `booking_form` (`Application_no`, `Department_Name`, `Hall_Name`, `D
 CREATE TABLE `login` (
   `username` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
-  `usertype` varchar(20) NOT NULL
+  `usertype` varchar(20) NOT NULL,
+  `name` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `login`
 --
 
-INSERT INTO `login` (`username`, `password`, `usertype`) VALUES
-('bo', '123', 'secretary'),
-('cs', '123', 'Dashboard'),
-('vp', '123', 'VP');
+INSERT INTO `login` (`username`, `password`, `usertype`, `name`) VALUES
+('01fbo01', '123', 'user', 'Botany'),
+('01fco01', '123', 'user', 'Commerce '),
+('01fcs01', '123', 'user', 'Computer Science '),
+('01fvp01', '123', 'VP', 'Vice Principal '),
+('01sjc001', '123', 'secretary', 'Secretary ');
 
 --
 -- Indexes for dumped tables
@@ -91,7 +97,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `booking_form`
 --
 ALTER TABLE `booking_form`
-  MODIFY `Application_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `Application_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

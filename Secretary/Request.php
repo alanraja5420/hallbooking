@@ -1,6 +1,6 @@
 <?php
 include("..\database\connection.php");
-$query = "SELECT * FROM booking_form";
+$query = "SELECT * FROM booking_form where status=3";
 $result = mysqli_query($conn, $query);
 ?>
 
@@ -87,8 +87,36 @@ $result = mysqli_query($conn, $query);
         <td><?php echo $row['End_Time']; ?></td>
         <td><?php echo $row['purpose']; ?></td>
         <td class="action-buttons">
-          <button class="approve-button" onclick="approveBooking(<?php echo $row['Application_no']; ?>)">Approve</button>
-          <button class="reject-button" onclick="rejectBooking(<?php echo $row['Application_no']; ?>)">Reject</button>
+         <!-- ... (Previous PHP and HTML code) ... -->
+<td class="action-buttons">
+  <form method="POST">
+    <input type="hidden" name="applicationNo" value="<?php echo $row['Application_no']; ?>">
+    <input type="hidden" name="status" value="1">
+    <button class="approve-button" name="action">Approve</button>
+  </form>
+  <form method="POST">
+    <input type="hidden" name="applicationNo" value="<?php echo $row['Application_no']; ?>">
+    <input type="hidden" name="status" value="2">
+    <button class="reject-button" name="action">Reject</button>
+  </form>
+</td>
+<!-- ... (Rest of the HTML code) ... -->
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action'])) {
+  $applicationNo = $_POST['applicationNo'];
+  $status = $_POST['status'];
+
+  // Update the database to reflect the approval/rejection status
+  $st = "UPDATE booking_form SET status = '$status' WHERE Application_no = '$applicationNo'";
+  if (mysqli_query($conn, $st)) {
+    // The query was successful, you can add success handling here if needed.
+  } else {
+    // Handle database update error, you can add error handling here if needed.
+  }
+}
+?>
+
         </td>
       </tr>
     <?php

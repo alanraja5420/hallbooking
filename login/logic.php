@@ -12,15 +12,15 @@ include("../database/connection.php");
     
     $name = $_POST['user'];
     $pass = $_POST['pass'];
-    $_SESSION['user'] = $name;
     $sql="select * from login where username='$name' AND password='$pass'";
 
     $result=mysqli_query($conn,$sql);
     $row=mysqli_fetch_array($result);
 
-    if($row["usertype"]=="Dashboard")
+    if($row["usertype"]=="user")
     {
-        header("location:..\User\Dashboard.php");
+        header("location:..\User\Dashbboard.php");
+        $_SESSION['user']=$name;
     }
     elseif($row["usertype"]=="secretary")
     {

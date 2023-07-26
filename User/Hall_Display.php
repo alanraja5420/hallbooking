@@ -1,8 +1,3 @@
-<?php
-    session_start();
-    if($_SESSION['user']){
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,25 +23,6 @@
                     <span> Dashboard </span>
                 </a>
             </li>
-        
-            <li>
-                <a href="../User/Hall_Display.php">
-                    <i class="fas fa-chart-bar"></i>
-                    <span> Halls </span>
-                </a>
-            </li>
-            <li>
-                <a href="../User/Booking.php">
-                    <i class="fas fa-briefcase"></i>
-                    <span> Booking </span>
-                </a>
-            </li>
-            <li>
-                <a href="Status.php">
-                    <i class="fas fa-star"></i>
-                    <span> Status </span>
-                </a>
-            </li>
             <li class="logout">
                 <a href="../login/logout.php">
                     <i class="fas fa-sign-out-alt"></i>
@@ -58,31 +34,24 @@
     </div>
     <div class="main--content">
     <div class="header--wrapper">
-        <div class="header--title">
+    <div class="header--title">
         <span> St.Joseph's college </span>
         <h2> Dashboard </h2>
-    </div>
-    <div class="user--info">
+        </div>
+        <div class="user--info">
         <div class="search--box">
         <i class="fa-solid fa-search"></i>
         <input type="text" placeholder="search"/>
         </div>
+        
+        <img src="./sjc.png" alt=""/>
+        </div>
+        </div> 
         <?php
-            
-            $name = $_SESSION['user'];
-    ?>
-    <p><?php echo $name?></p>
-    <img src="./sjc.png" alt=""/>
+        include("Halls.php");
+        
+        ?>
     </div>
-    </div> 
-    </div>
+
 </body>
-
-<?php
-    }else{
-            header("location:../login/login.php");
-    }
-?>
-
-
 </html>
