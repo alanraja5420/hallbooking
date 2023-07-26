@@ -19,7 +19,7 @@ include("../database/connection.php");
 
     if($row["usertype"]=="user")
     {
-        header("location:..\User\Dashbboard.php");
+        header("location:..\User\Dashboard.php");
         $_SESSION['user']=$name;
     }
     elseif($row["usertype"]=="secretary")
