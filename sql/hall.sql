@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 26, 2023 at 08:09 PM
+-- Generation Time: Jul 26, 2023 at 07:54 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -69,7 +69,7 @@ CREATE TABLE `login` (
 INSERT INTO `login` (`username`, `password`, `usertype`, `name`) VALUES
 ('01fbo01', '123', 'user', 'Botany'),
 ('01fco01', '123', 'user', 'Commerce '),
-('01fcs01', '123', 'user', 'CS'),
+('01fcs01', '123', 'user', 'Computer Science '),
 ('01fvp01', '123', 'VP', 'Vice Principal '),
 ('01sjc001', '123', 'secretary', 'Secretary ');
 
