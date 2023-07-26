@@ -1,80 +1,49 @@
-/* Reset some default styles for the slider */
-body, html {
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
+    box-sizing: border-box;
+    
 }
 
-/* Customize the style for the slider container */
-.slider {
-    width: 80%;
-    margin: 0 auto;
-    height: 500px; /* Adjust the height as needed */
-    overflow: hidden;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dcd5d5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* Customize the style for individual slides */
-.slide {
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    position: absolute;
-    transition: opacity 1s;
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 20px;
 }
 
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #dae2e5;
+    border-radius: 4px;
+    background-color: #85bacd;
 }
 
-/* Add animation to the slides */
-@keyframes slideShow {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-/* Apply the animation to the slides */
-.slider .slide:nth-child(1) {
-    animation: slideShow 6s infinite;
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #190404;
 }
 
-.slider .slide:nth-child(2) {
-    animation: slideShow 6s infinite 2s;
-}
-
-.slider .slide:nth-child(3) {
-    animation: slideShow 6s infinite 4s;
-}
-
-.slider .slide:nth-child(4) {
-    animation: slideShow 6s infinite 6s;
-}
-
-.slider .slide:nth-child(5) {
-    animation: slideShow 6s infinite 8s;
-}
-
-.slider .slide:nth-child(6) {
-    animation: slideShow 6s infinite 10s;
-}
-
-.slider .slide:nth-child(7) {
-    animation: slideShow 6s infinite 12s;
-}
-
-/* Style the slide titles */
-.slide-title {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 5px 10px;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 5px;
+p {
+    font-size: 14px;
+    color: #c0ccc3;
 }
