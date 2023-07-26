@@ -31,26 +31,26 @@
         
     </div>
     <div class="main--content">
-       <div class="header--wrapper">
-       <div class="header--title">
+    <div class="header--wrapper">
+    <div class="header--title">
         <span> St.Joseph's college </span>
         <h2> Dashboard </h2>
-       </div>
-       <div class="user--info">
-         <div class="search--info">
-            <div class="sc">
-              <span> Secretary </span>
-              <h5> Amal <h5>
-            </div>
-         </div>
-         <img src="../Asset/sjc.png" alt=""/>
-       </div>
-       
-       </div> 
-       <?php
-        include("Request.php");
-       ?>
     </div>
- </body>
+    <div class="user--info">
+        <div class="search--info">
+            <div class="sc">
+            <span> Secretary </span>
+            <h5> Amal <h5>
+            </div>
+        </div>
+        <img src="../Asset/sjc.png" alt=""/>
+    </div>
+    </div>
+
+    <?php
+        include("Request.php");
+    ?>
+    </div>
+</body>
 
 </html>
