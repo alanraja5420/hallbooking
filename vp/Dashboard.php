@@ -63,11 +63,19 @@
             <h5> Ravindran <h5>
             </div>
         </div>
+
+        <?php
+                $name = $_SESSION['user'];
+            ?>
+        <p> 
+            <?php echo $name ?>
+        </p>
+
         <img src="../Asset/sjc.png" alt=""/>
     </div>
     </div> 
     </div>
- </body>
+</body>
 
 </html>
 

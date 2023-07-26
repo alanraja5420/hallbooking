@@ -66,6 +66,15 @@
             <h5> Amal <h5>
             </div>
         </div>
+        
+            <?php
+                $name = $_SESSION['user'];
+            ?>
+        <p> 
+            <?php echo $name ?>
+        </p>
+
+
         <img src="../Asset/sjc.png" alt=""/>
     </div>
     </div> 
