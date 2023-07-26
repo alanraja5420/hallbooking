@@ -28,12 +28,7 @@
                     <span> Dashboard </span>
                 </a>
             </li>
-            <li>
-                <a href="#">
-                    <i class="fas fa-user"></i>
-                    <span> Profile </span>
-                </a>
-            </li>
+           
             <li>
                 <a href="Halls.php">
                     <i class="fas fa-chart-bar"></i>
