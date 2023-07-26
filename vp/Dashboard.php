@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    if($_SESSION['user']){
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,22 +51,28 @@
         
     </div>
     <div class="main--content">
-       <div class="header--wrapper">
-       <div class="header--title">
+    <div class="header--wrapper">
+    <div class="header--title">
         <span> St.Joseph's college </span>
         <h2> Dashboard </h2>
-       </div>
-       <div class="user--info">
-         <div class="search--info">
+    </div>
+    <div class="user--info">
+        <div class="search--info">
             <div class="sc">
-              <span> Vice Principal </span>
-              <h5> Ravindran <h5>
+            <span> Vice Principal </span>
+            <h5> Ravindran <h5>
             </div>
-         </div>
-         <img src="../Asset/sjc.png" alt=""/>
-       </div>
-       </div> 
+        </div>
+        <img src="../Asset/sjc.png" alt=""/>
+    </div>
+    </div> 
     </div>
  </body>
 
 </html>
+
+<?php
+    }else{
+    header("location:../login/login.php");
+    }
+?>
