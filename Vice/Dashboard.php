@@ -24,21 +24,15 @@
                 </a>
             </li>
             <li>
-                <a href="Halls.php">
+                <a href="../User/Halls.php">
                     <i class="fas fa-chart-bar"></i>
                     <span> Halls </span>
                 </a>
             </li>
             <li>
-                <a href="../Approved.php">
-                    <i class="fas fa-briefcase"></i>
-                    <span> Request </span>
-                </a>
-            </li>
-            <li>
                 <a href="#">
                     <i class="fas fa-star"></i>
-                    <span> Approved </span>
+                    <span> Status </span>
                 </a>
             </li>
             <li class="logout">
