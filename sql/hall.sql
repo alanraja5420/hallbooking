@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 20, 2023 at 07:36 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Jul 26, 2023 at 05:55 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,8 +34,17 @@ CREATE TABLE `booking_form` (
   `Date` date NOT NULL,
   `Start_Time` time(6) NOT NULL,
   `End_Time` time(6) NOT NULL,
-  `purpose` varchar(100) NOT NULL
+  `purpose` varchar(100) NOT NULL,
+  `status` int(10) NOT NULL DEFAULT 3
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `booking_form`
+--
+
+INSERT INTO `booking_form` (`Application_no`, `Department_Name`, `Hall_Name`, `Date`, `Start_Time`, `End_Time`, `purpose`, `status`) VALUES
+(31, 'mat', 'Sail auditorium', '2023-07-11', '22:56:00.000000', '22:57:00.000000', 'kmkjlk', 3),
+(56, 'tamil', 'MCA Seminar Hall', '2023-07-06', '23:55:00.000000', '23:55:00.000000', 'summa', 3);
 
 -- --------------------------------------------------------
 
@@ -44,7 +53,7 @@ CREATE TABLE `booking_form` (
 --
 
 CREATE TABLE `login` (
-  `username` varchar(30) NOT NULL,
+  `username` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
   `usertype` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -54,8 +63,9 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`username`, `password`, `usertype`) VALUES
-('bo', '123', 'Dashboard'),
-('cs', '123', 'secretary ');
+('bo', '123', 'secretary'),
+('cs', '123', 'Dashboard'),
+('vp', '123', 'VP');
 
 --
 -- Indexes for dumped tables
@@ -81,7 +91,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `booking_form`
 --
 ALTER TABLE `booking_form`
-  MODIFY `Application_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `Application_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

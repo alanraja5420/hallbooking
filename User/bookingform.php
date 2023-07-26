@@ -203,7 +203,7 @@ font-weight: bold;
       
       <input type="submit" name="Book_Hall" value="Book Now" class="button">
       </div>
-   <h1>
+<h1>
 <?php
 if(isset($_POST['Book_Hall']))
 {

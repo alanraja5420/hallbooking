@@ -1,10 +1,11 @@
 <?php
-            session_start();
-           if($_SESSION['user']){
-         ?>
+    session_start();
+    if($_SESSION['user']){
+?>
+
 <!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
     <meta charset="UTF-8"/>
     <title> Dashboard </title>
     <link rel="stylesheet" href="style.css"/>
@@ -16,8 +17,8 @@
 
 
 
- </head>
- <body>
+</head>
+<body>
     <div class="sidebar">
         <div class="logo"></div>
         <ul class="menu">
@@ -61,31 +62,31 @@
         
     </div>
     <div class="main--content">
-       <div class="header--wrapper">
-       <div class="header--title">
+    <div class="header--wrapper">
+        <div class="header--title">
         <span> St.Joseph's college </span>
         <h2> Dashboard </h2>
-       </div>
-       <div class="user--info">
-         <div class="search--box">
-           <i class="fa-solid fa-search"></i>
-           <input type="text" placeholder="search"/>
-         </div>
-         <?php
+    </div>
+    <div class="user--info">
+        <div class="search--box">
+        <i class="fa-solid fa-search"></i>
+        <input type="text" placeholder="search"/>
+        </div>
+        <?php
             
             $name = $_SESSION['user'];
-         ?>
-         <p><?php echo $name?></p>
-         <img src="./sjc.png" alt=""/>
-       </div>
-       </div> 
+    ?>
+    <p><?php echo $name?></p>
+    <img src="./sjc.png" alt=""/>
     </div>
- </body>
+    </div> 
+    </div>
+</body>
 
 <?php
-           }else{
+    }else{
             header("location:../login/login.php");
-           }
+    }
 ?>
 
 

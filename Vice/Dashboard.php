@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    if($_SESSION['user']){
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,21 +24,15 @@
                 </a>
             </li>
             <li>
-                <a href="Halls.php">
+                <a href="../User/Halls.php">
                     <i class="fas fa-chart-bar"></i>
                     <span> Halls </span>
                 </a>
             </li>
             <li>
-                <a href="../Approved.php">
-                    <i class="fas fa-briefcase"></i>
-                    <span> Request </span>
-                </a>
-            </li>
-            <li>
                 <a href="#">
                     <i class="fas fa-star"></i>
-                    <span> Approved </span>
+                    <span> Status </span>
                 </a>
             </li>
             <li class="logout">
@@ -47,22 +45,36 @@
         
     </div>
     <div class="main--content">
-       <div class="header--wrapper">
-       <div class="header--title">
+    <div class="header--wrapper">
+    <div class="header--title">
         <span> St.Joseph's college </span>
         <h2> Dashboard </h2>
-       </div>
-       <div class="user--info">
-         <div class="search--info">
-            <div class="sc">
-              <span> Vice Principal </span>
-              <h5> Ravindran <h5>
-            </div>
-         </div>
-         <img src="../Asset/sjc.png" alt=""/>
-       </div>
-       </div> 
     </div>
- </body>
+    <div class="user--info">
+        <div class="search--info">
+            <div class="sc">
+            <span> Vice Principal </span>
+            <h5> Ravindran <h5>
+            </div>
+        </div>
+
+        <?php
+                $name = $_SESSION['user'];
+            ?>
+        <p> 
+            <?php echo $name ?>
+        </p>
+
+        <img src="../Asset/sjc.png" alt=""/>
+    </div>
+    </div> 
+    </div>
+</body>
 
 </html>
+
+<?php
+    }else{
+    header("location:../login/login.php");
+    }
+?>
