@@ -52,25 +52,24 @@
         </ul>
         
     </div>
-    <div class="main--content">
-       <div class="header--wrapper">
-       <div class="header--title">
+<div class="main--content">
+<div class="header--wrapper">
+    <div class="header--title">
         <span> St.Joseph's college </span>
         <h2> Dashboard </h2>
-       </div>
-       <div class="user--info">
-         <div class="search--box">
-           <i class="fa-solid fa-search"></i>
-           <input type="text" placeholder="search"/>
-         </div>
-         <img src="../Asset/sjc.png" alt=""/>
-       </div>
-       </div> 
-       <?php
-    include("bookingform.php");
-    ?>
     </div>
+    <div class="user--info">
+    <div class="search--box">
+        <i class="fa-solid fa-search"></i>
+        <input type="text" placeholder="search"/>
+    </div>
+        <img src="../Asset/sjc.png" alt=""/>
+</div>
+</div> 
+<?php
+    include("bookingform.php");
+?>
+</div>
     
- </body>
-
+</body>
 </html>
