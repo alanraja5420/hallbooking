@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 26, 2023 at 05:55 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Jul 26, 2023 at 06:05 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,8 +32,8 @@ CREATE TABLE `booking_form` (
   `Department_Name` text NOT NULL,
   `Hall_Name` text NOT NULL,
   `Date` date NOT NULL,
-  `Start_Time` time(6) NOT NULL,
-  `End_Time` time(6) NOT NULL,
+  `Start_Time` time NOT NULL,
+  `End_Time` time NOT NULL,
   `purpose` varchar(100) NOT NULL,
   `status` int(10) NOT NULL DEFAULT 3
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -43,8 +43,8 @@ CREATE TABLE `booking_form` (
 --
 
 INSERT INTO `booking_form` (`Application_no`, `Department_Name`, `Hall_Name`, `Date`, `Start_Time`, `End_Time`, `purpose`, `status`) VALUES
-(31, 'mat', 'Sail auditorium', '2023-07-11', '22:56:00.000000', '22:57:00.000000', 'kmkjlk', 3),
-(56, 'tamil', 'MCA Seminar Hall', '2023-07-06', '23:55:00.000000', '23:55:00.000000', 'summa', 3);
+(31, 'mat', 'Sail auditorium', '2023-07-11', '22:56:00', '22:57:00', 'kmkjlk', 3),
+(56, 'tamil', 'MCA Seminar Hall', '2023-07-06', '23:55:00', '23:55:00', 'summa', 3);
 
 -- --------------------------------------------------------
 
