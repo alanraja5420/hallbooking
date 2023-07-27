@@ -25,10 +25,12 @@ include("../database/connection.php");
     elseif($row["usertype"]=="secretary")
     {
         header("location:..\Secretary\Dashboard.php");
+        $_SESSION['user']=$name;
     }
     elseif($row["usertype"]=="VP")
     {
         header("location:..\Vice\Dashboard.php");
+        $_SESSION['user']=$name;
     }
     else
     {
