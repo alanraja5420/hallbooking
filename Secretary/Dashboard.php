@@ -67,12 +67,11 @@
             </div>
         </div>
         
-            <?php
-                $name = $_SESSION['user'];
-            ?>
-        <p> 
-            <?php echo $name ?>
-        </p>
+        <?php
+            
+            $name = $_SESSION['user'];
+    ?>
+    <p><?php echo $name?></p>
 
 
         <img src="../Asset/sjc.png" alt=""/>
@@ -81,9 +80,10 @@
     </div>
 
 </body>
-</html>
 <?php
     }else{
-    header("location:../login/login.php");
+            header("location:../login/login.php");
     }
 ?>
+
+</html>
