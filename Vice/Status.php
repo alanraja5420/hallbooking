@@ -1,7 +1,6 @@
 <?php
 include("..\database\connection.php");
-include("Reject.php");
-$query = "SELECT * FROM booking_form where status=3";
+$query = "SELECT * FROM booking_form";
 $result = mysqli_query($conn, $query);
 ?>
 
@@ -87,9 +86,9 @@ $result = mysqli_query($conn, $query);
         <td><?php echo $row['Start_Time']; ?></td>
         <td><?php echo $row['End_Time']; ?></td>
         <td><?php echo $row['purpose']; ?></td>
-        <td><?php if($row['status']=3){
+        <td><?php if($row['status']==3){
             echo 'Pending';
-        }elseif($row['status']=1){
+        }elseif($row['status']==1){
             echo "Approved";
         }else{
             echo "Rejected";
