@@ -11,7 +11,7 @@
         <div class="logo"></div>
         <ul class="menu">
             <li class="active">
-                <a href="#" >
+                <a href="Dashboard.php" >
                     <i class="fas fa-tachometer-alt"></i>
                     <span> Dashboard </span>
                 </a>
@@ -30,7 +30,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="status.php">
                     <i class="fas fa-star"></i>
                     <span> Status </span>
                 </a>
