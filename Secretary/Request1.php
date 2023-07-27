@@ -14,7 +14,7 @@
         <div class="logo"></div>
         <ul class="menu">
             <li class="active">
-                <a href="#" >
+                <a href="Dashboard.php" >
                     <i class="fas fa-tachometer-alt"></i>
                     <span> Dashboard </span>
                 </a>
