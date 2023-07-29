@@ -158,13 +158,13 @@ font-weight: bold;
           Department Name:
           <select  id="name" name="Department_Name" class="form-input" required>
           <option value="">Department_Name</option>
-          <option value="cs">cs</option>
-            <option value="phy">phy</option>
-            <option value="che">che</option>
-            <option value="mat">mat</option>
-            <option value="eng">eng</option>
-            <option value="tamil">tamil</option>
-            <option value="eco">eco</option>
+          <option value="Computer Science">Computer Science</option>
+            <option value="Physics">Physics</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="English">English</option>
+            <option value="Tamil">Tamil</option>
+            <option value="Economics">Economics</option>
 </select>
         </label>
       </div>
@@ -219,24 +219,52 @@ font-weight: bold;
       </div>
 <h1>
 <?php
-if(isset($_POST['Book_Hall']))
-{
-  include('../database/connection.php');
-  $Department_Name = $_POST['Department_Name'];
-  $Hall_Name = $_POST['Hall_Name'];
-  $Date = $_POST['Date'];
-  $Start_Time = $_POST['Start_Time'];
-  $End_Time = $_POST['End_Time'];
-  $purpose = $_POST['purpose'];
+session_start();
+if ($_SESSION['user']) {
+?>
 
-  $query ="INSERT INTO booking_form (Department_Name,Hall_Name,Date,Start_Time,End_Time,purpose) VALUES('$Department_Name','$Hall_Name','$Date','$Start_Time','$End_Time','$purpose')";
-  if($conn->query($query)){
-  
-    echo 'Data Inserted Successfully';
-  }
-  
+<!-- Your existing HTML code -->
+
+<?php
+if (isset($_POST['Book_Hall'])) {
+    include('../database/connection.php');
+    $Department_Name = $_POST['Department_Name'];
+    $Hall_Name = $_POST['Hall_Name'];
+    $Date = $_POST['Date'];
+    $Start_Time = $_POST['Start_Time'];
+    $End_Time = $_POST['End_Time'];
+    $purpose = $_POST['purpose'];
+
+    // Check if the selected date and hall already have a booking
+    $query = "SELECT * FROM booking_form WHERE Hall_Name='$Hall_Name' AND Date='$Date'";
+    $result = $conn->query($query);
+
+    if ($result->num_rows > 0) {
+        // The selected hall is already booked for the selected date
+        echo 'The hall is already booked for the selected date.';
+    } else {
+        // Insert the new booking into the database
+        $query = "INSERT INTO booking_form (Department_Name, Hall_Name, Date, Start_Time, End_Time, purpose)
+                  VALUES ('$Department_Name', '$Hall_Name', '$Date', '$Start_Time', '$End_Time', '$purpose')";
+
+        if ($conn->query($query)) {
+            echo 'Data Inserted Successfully';
+        } else {
+            echo 'Error inserting data: ' . $conn->error;
+        }
+    }
 }
 ?>
+
+<!-- Rest of your HTML code -->
+
+<?php
+} else {
+    header("location:../login/login.php");
+}
+?>
+
+
 </h1>
 </form>
 </div>

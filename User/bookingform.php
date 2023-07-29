@@ -144,13 +144,13 @@ font-weight: bold;
           Department Name:
           <select  id="name" name="Department_Name" class="form-input" required>
           <option value="">Department_Name</option>
-          <option value="cs">cs</option>
-            <option value="phy">phy</option>
-            <option value="che">che</option>
-            <option value="mat">mat</option>
-            <option value="eng">eng</option>
-            <option value="tamil">tamil</option>
-            <option value="eco">eco</option>
+          <option value="Computer Science">Computer Science</option>
+            <option value="Physics">Physics</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="English">English</option>
+            <option value="Tamil">Tamil</option>
+            <option value="Economics">Economics</option>
 </select>
         </label>
       </div>
