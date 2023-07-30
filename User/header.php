@@ -16,11 +16,7 @@
     <div class="user--info">
         <div class="search--box">
         </div>
-        <?php
-            
-            $name = $_SESSION['user'];
-    ?>
-    <p><?php echo $name?></p>
+      
     <img src="./sjc.png" alt=""/>
     </div>
     </div> 

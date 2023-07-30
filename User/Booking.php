@@ -218,10 +218,7 @@ font-weight: bold;
       <input type="submit" name="Book_Hall" value="Book Now" class="button">
       </div>
 <h1>
-<?php
-session_start();
-if ($_SESSION['user']) {
-?>
+
 
 <!-- Your existing HTML code -->
 
@@ -258,11 +255,7 @@ if (isset($_POST['Book_Hall'])) {
 
 <!-- Rest of your HTML code -->
 
-<?php
-} else {
-    header("location:../login/login.php");
-}
-?>
+
 
 
 </h1>
@@ -271,10 +264,12 @@ if (isset($_POST['Book_Hall'])) {
 </div>
     
 </body>
-</html>
-
 <?php
     }else{
             header("location:../login/login.php");
     }
+  
 ?>
+</html>
+
+

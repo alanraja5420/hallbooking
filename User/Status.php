@@ -1,13 +1,21 @@
 <?php
+session_start();
+if($_SESSION['user']){
 include("..\database\connection.php");
-$query = "SELECT * FROM booking_form";
+
+$query = "SELECT * FROM booking_form WHERE Department_Name='Computer Science' AND (status = 3 OR status = 1)";
 $result = mysqli_query($conn, $query);
+}
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
   <title>Hall Booking Admin Panel</title>
+  <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+        
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -61,7 +69,13 @@ $result = mysqli_query($conn, $query);
     }
     </style>
 </head>
+
+
+
 <body>
+<?php include "Sidebar.php"?>
+<div class="main--content">
+<?php include 'header.php'?>
   <h1>Hall Booking Requests</h1>
 
   <table>
