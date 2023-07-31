@@ -1,11 +1,10 @@
 <?php
-session_start();
-if($_SESSION['user']){
+
 include("..\database\connection.php");
 
 $query = "SELECT * FROM booking_form WHERE Department_Name='Computer Science' AND (status = 3 OR status = 1)";
 $result = mysqli_query($conn, $query);
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -107,7 +106,7 @@ $result = mysqli_query($conn, $query);
         }else{
             echo "Rejected";
         }?></td>
-       
+      
 
         </td>
       </tr>

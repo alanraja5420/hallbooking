@@ -1,57 +1,44 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8"/>
-    <title> Dashboard </title>
-    <link rel="stylesheet" href="style.css"/>
-
-
+    <title>Seven Cards with PHP and CSS</title>
+    <link rel="stylesheet" type="text/css" href="Halls.css">
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
-
-
+        
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo"></div>
-        <ul class="menu">
-            <li class="active">
-                <a href="Dashboard.php" >
-                    <i class="fas fa-tachometer-alt"></i>
-                    <span> Dashboard </span>
-                </a>
-            </li>
-            <li class="logout">
-                <a href="../login/logout.php">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span> Logout </span>
-                </a>
-            </li>
-        </ul>
-        
-    </div>
-    <div class="main--content">
-    <div class="header--wrapper">
-    <div class="header--title">
-        <span> St.Joseph's college </span>
-        <h2> Dashboard </h2>
-        </div>
-        <div class="user--info">
-        <div class="search--box">
-        <i class="fa-solid fa-search"></i>
-        <input type="text" placeholder="search"/>
-        </div>
-        
-        <img src="./sjc.png" alt=""/>
-        </div>
-        </div> 
+<?php include "Sidebar.php"?>
+<div class="main--content">
+<?php include 'header.php'?>
+    <div class="card-container">
         <?php
-        include("Halls.php");
-        
+            // Sample data with images (you can fetch data from a database or an API)
+            $cardData = [
+                ['title' => 'LAWLEY HALL',  'image' => '../Asset/sjc.png'],
+                ['title' => 'KP JOSEPH HALL', 'image' => '../Asset/image.jpeg'],
+                ['title' => 'SAIL AUDITORIUM', 'image' => '../Asset/sjc2.jpeg'],
+                ['title' => 'JUBLIE HALL', 'image' => '../Asset/sjc3.jpeg'],
+                ['title' => 'MARINE HALL', 'image' => '../Asset/bac1.jpg'],
+                ['title' => 'MCA SEMINAR HALL', 'image' => '../Asset/bac4.jpg'],
+                ['title' => 'COMMUNITY CENTER HALL', 'image' => '../Asset/bac5.jpg'],
+            ];
+
+            // Loop through the data and create cards dynamically
+            foreach ($cardData as $card) {
+                echo '<div class="card">';
+                echo '<img src="' . $card['image'] . '" alt="' . $card['title'] . '">';
+                echo '<h2>' . $card['title'] . '</h2>';
+            
+                echo '</div>';
+            }
         ?>
     </div>
+</body>
+</html>
 
 </body>
 </html>
