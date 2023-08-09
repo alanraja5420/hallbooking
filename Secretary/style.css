@@ -46,8 +46,8 @@ body{
     transition: all 0.5s ease-in-out;
 }
 .menu li:hover,
- .active{
-  background: #e0e0e058;
+.active{
+    background: #e0e0e058;
 }
 .menu a{
     color: #fff;
@@ -79,8 +79,8 @@ padding: 1rem;
 }
 
 .header--wrapper img{
-width: 80px;
-height: 80px;
+width: 50px;
+height: 50px;
 cursor: pointer;
 border-radius: 50%;
 }
@@ -99,19 +99,6 @@ border-radius: 50%;
 }
 .user--info{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    background: #fff;
-    border-radius: 10px;
-    padding: 10px 0.5rem;
-    margin-bottom: 1rem;
-
-}
-.search--info{
-    color: rgba(113,99,186,255);
-}
-.sc{
-     
-    margin: 20px;
-}
+    margin-left: center;
+    gap: 1rem;
+}                                       

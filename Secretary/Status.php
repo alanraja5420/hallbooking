@@ -1,6 +1,6 @@
 <?php
 include("..\database\connection.php");
-$query = "SELECT * FROM booking_form where status=1 and status=2";
+$query = "SELECT * FROM booking_form where status=1 or status=3 or status=2";
 $result = mysqli_query($conn, $query);
 ?>
 
@@ -59,16 +59,14 @@ $result = mysqli_query($conn, $query);
       color: white;
       border: none;
     }
+    
     </style>
 </head>
 <body>
-<?php
-  include("Sidebar.php");
-  ?>
-  <div> 
-  <?php
-  include("header.php")
-  ?>
+<?php include "Sidebar.php"?>
+<div class="main--content">
+<?php include 'header.php'?>
+    <div class="card-container">
   <h1>Hall Booking Requests</h1>
 
   <table>
@@ -93,6 +91,14 @@ $result = mysqli_query($conn, $query);
         <td><?php echo $row['Start_Time']; ?></td>
         <td><?php echo $row['End_Time']; ?></td>
         <td><?php echo $row['purpose']; ?></td>
+        <td><?php if($row['status']==3){
+            echo 'Pending';
+        }elseif($row['status']==1){
+            echo "Approved";
+        }else{
+            echo "Rejected";
+        }?></td>
+      
         
       </tr>
     <?php
@@ -102,5 +108,7 @@ $result = mysqli_query($conn, $query);
 
   <!-- JavaScript code to handle approval and rejection -->
   <!-- ... Your JavaScript code ... -->
+    </div>
+</div>
 </body>
 </html>

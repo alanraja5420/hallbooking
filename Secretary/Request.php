@@ -62,13 +62,10 @@ $result = mysqli_query($conn, $query);
     </style>
 </head>
 <body>
-  <?php
-  include("Sidebar.php");
-  ?>
-  <div> 
-  <?php
-  include("header.php")
-  ?>
+<?php include "Sidebar.php"?>
+<div class="main--content">
+<?php include 'header.php'?>
+    <div class="card-container">
   <h1>Hall Booking Requests</h1>
 
   <table>
@@ -133,5 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action'])) {
 
   <!-- JavaScript code to handle approval and rejection -->
   <!-- ... Your JavaScript code ... -->
+    </div>
+</div>
 </body>
 </html>
