@@ -59,6 +59,28 @@ $result = mysqli_query($conn, $query);
       color: white;
       border: none;
     }
+    /* Styles for Action Buttons */
+.pending-button {
+    background-color: #ffc107; /* Light yellow */
+    color: black;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.approved-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.rejected-button {
+    background-color: #f44336; /* Red */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
     </style>
 </head>
 <body>
@@ -90,13 +112,15 @@ $result = mysqli_query($conn, $query);
         <td><?php echo $row['Start_Time']; ?></td>
         <td><?php echo $row['End_Time']; ?></td>
         <td><?php echo $row['purpose']; ?></td>
-        <td><?php if($row['status']==3){
-            echo 'Pending';
-        }elseif($row['status']==1){
-            echo "Approved";
-        }else{
-            echo "Rejected";
-        }?></td>
+        <td>
+    <?php if ($row['status'] == 3): ?>
+        <span class="pending-button">Pending</span>
+    <?php elseif ($row['status'] == 1): ?>
+        <span class="approved-button">Approved</span>
+    <?php else: ?>
+        <span class="rejected-button">Rejected</span>
+    <?php endif; ?>
+</td>
        
 
         </td>

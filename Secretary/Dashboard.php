@@ -24,7 +24,7 @@
                 </a>
             </li>
             <li>
-                <a href="Hall_Display.php">
+                <a href="Halls.php">
                     <i class="fas fa-chart-bar"></i>
                     <span> Halls </span>
                 </a>
