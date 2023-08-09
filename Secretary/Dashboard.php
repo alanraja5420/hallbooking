@@ -24,7 +24,7 @@
                 </a>
             </li>
             <li>
-                <a href="../User/Hall_Display.php">
+                <a href="Hall_Display.php">
                     <i class="fas fa-chart-bar"></i>
                     <span> Halls </span>
                 </a>
@@ -32,7 +32,7 @@
             
                 <li>
 
-                <a href="Request1.php">
+                <a href="Request.php">
 
                     <i class="fas fa-briefcase"></i>
                     <span> Request </span>
@@ -61,10 +61,7 @@
     </div>
     <div class="user--info">
         <div class="search--info">
-            <div class="sc">
-            <span> Secretary </span>
-            <h5> Amal <h5>
-            </div>
+            
         </div>
         
         <?php

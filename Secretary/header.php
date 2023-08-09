@@ -16,10 +16,12 @@
 <body>
 <div class="header--wrapper">
         <div class="header--title">
-        <span> St.Joseph's college
-        <h2> Dashboard </h2> </span>
+        <span> St.Joseph's college </span>
+        <h2> Dashboard </h2>
     </div>
     <div class="user--info">
+        <div class="search--box">
+        </div>
         <?php
                 $name = $_SESSION['user'];
             ?>

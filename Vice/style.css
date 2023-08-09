@@ -101,4 +101,6 @@ border-radius: 50%;
     display: flex;
     margin-left: center;
     gap: 1rem;
+    margin-top: 10px;
+    font-size: bold;
 }

@@ -5,7 +5,7 @@ $result = mysqli_query($conn, $query);
 ?>
 
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
   <title>Hall Booking Admin Panel</title>
   <style>
@@ -62,6 +62,13 @@ $result = mysqli_query($conn, $query);
     </style>
 </head>
 <body>
+  <?php
+  include("Sidebar.php");
+  ?>
+  <div> 
+  <?php
+  include("header.php")
+  ?>
   <h1>Hall Booking Requests</h1>
 
   <table>

@@ -24,7 +24,7 @@
                 </a>
             </li>
             <li>
-                <a href="Hall_Display.php">
+                <a href="Halls.php">
                     <i class="fas fa-chart-bar"></i>
                     <span> Halls </span>
                 </a>
@@ -51,13 +51,7 @@
         <h2> Dashboard </h2>
     </div>
     <div class="user--info">
-        <div class="search--info">
-            <div class="sc">
-            <span> Vice Principal </span>
-            <h5> Ravindran <h5>
-            </div>
-        </div>
-
+        
         <?php
                 $name = $_SESSION['user'];
             ?>

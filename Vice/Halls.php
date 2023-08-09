@@ -15,6 +15,9 @@
     <link rel="stylesheet" type="text/css" href="Halls.css">
 </head>
 <body>
+    <?php include("Sidebar.php") ?>
+    <div class="main--content">
+    <?php include("header.php") ?>
     <div class="card-container">
         <?php
             // Sample data with images (you can fetch data from a database or an API)
