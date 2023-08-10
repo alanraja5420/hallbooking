@@ -98,7 +98,7 @@ if (isset($_POST['Book_Hall'])) {
     $purpose = $_POST['purpose'];
 
     // Check if the selected date and hall already have a booking
-    $query = "SELECT * FROM booking_form WHERE Hall_Name='$Hall_Name' AND Date='$Date'";
+    $query = "SELECT * FROM booking_form WHERE Hall_Name='$Hall_Name' AND Date='$Date' and Start_Time='$Start_Time' and End_Time='$End_Time'";
     $result = $conn->query($query);
 
     if ($result->num_rows > 0) {
