@@ -110,7 +110,7 @@ if (isset($_POST['Book_Hall'])) {
                   VALUES ('$Department_Name', '$Hall_Name', '$Date', '$Start_Time', '$End_Time', '$purpose')";
 
         if ($conn->query($query)) {
-            echo 'Data Inserted Successfully';
+            echo 'Booking Successfully';
         } else {
             echo 'Error inserting data: ' . $conn->error;
         }

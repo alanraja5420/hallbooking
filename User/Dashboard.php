@@ -63,14 +63,13 @@
         <h2> Dashboard </h2>
     </div>
     <div class="user--info">
+    <img src="./sjc.png" alt=""/>
     
         <?php
                 $name = $_SESSION['user'];
             ?>
-        <p> 
-            <?php echo $name ?>
-        </p>
-    <img src="./sjc.png" alt=""/>
+        <p class="uname"> <?php echo $name ?> </p>
+  
     </div>
     </div> 
     </div>

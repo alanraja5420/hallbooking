@@ -24,15 +24,12 @@
         <div class="search--info">
             
         </div>
-        
+        <img src="../Asset/sjc.png" alt=""/>
         <?php
             
             $name = $_SESSION['user'];
     ?>
-    <p><?php echo $name?></p>
-
-
-        <img src="../Asset/sjc.png" alt=""/>
+    <p class="uname"><?php echo $name?></p>
     </div>
     </div> 
     </div>

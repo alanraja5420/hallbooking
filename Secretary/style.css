@@ -101,4 +101,10 @@ border-radius: 50%;
     display: flex;
     margin-left: center;
     gap: 1rem;
-}                                       
+}                                      
+.uname{
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+    margin-top: 14px;
+}

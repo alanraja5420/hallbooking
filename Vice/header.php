@@ -20,13 +20,14 @@
         <h2> Dashboard </h2> </span>
     </div>
     <div class="user--info">
+    <img src="./sjc.png" alt=""/>
         <?php
                 $name = $_SESSION['user'];
             ?>
-        <p> 
+        <p class="uname"> 
             <?php echo $name ?>
         </p>
-    <img src="./sjc.png" alt=""/>
+    
     </div>
     </div> 
 </body>

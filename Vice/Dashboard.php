@@ -51,15 +51,15 @@
         <h2> Dashboard </h2>
     </div>
     <div class="user--info">
-        
+    <img src="../Asset/sjc.png" alt=""/>
         <?php
                 $name = $_SESSION['user'];
             ?>
-        <p> 
+        <p class="uname"> 
             <?php echo $name ?>
         </p>
 
-        <img src="../Asset/sjc.png" alt=""/>
+    
     </div>
     </div> 
     </div>

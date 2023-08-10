@@ -88,7 +88,7 @@ $result = mysqli_query($conn, $query);
   <div class="main--content">
   <?php include("header.php") ?>
   
-  <h1>Hall Booking Requests</h1>
+  <h1>Hall Booking Status</h1>
 
   <table>
     <tr>

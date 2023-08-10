@@ -22,7 +22,7 @@ body{
     color: #fff;
     overflow: hidden;
     transition: all 0.5s linear;
-    background: rgba(113,99,186,255);
+    background: rgb(113,99,186,255);
 }
 .sidebar:hover {
     width: 240px;
@@ -102,4 +102,10 @@ border-radius: 50%;
     display: flex;
     margin-left: center;
     gap: 1rem;
+}
+.uname{
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+    margin-top: 14px;
 }
