@@ -2,7 +2,7 @@
 
 include("..\database\connection.php");
 
-$query = "SELECT * FROM booking_form WHERE Department_Name='Computer Science' AND (status = 3 OR status = 1)";
+$query = "SELECT * FROM booking_form WHERE Department_Name AND (status = 3 OR status = 1)";
 $result = mysqli_query($conn, $query);
 
 ?>
