@@ -30,6 +30,9 @@
             $name = $_SESSION['user'];
     ?>
     <p class="uname"><?php echo $name?></p>
+
+
+       
     </div>
     </div> 
     </div>
