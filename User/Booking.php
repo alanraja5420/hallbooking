@@ -79,9 +79,8 @@
           <textarea id="purpose" name="purpose" rows="4" cols="50" class="form-input1" required></textarea>
         </label>
       </div>
-      <div><br><br><br>
-      <button class="Book-Hall" role="button">Book Now</button>
-</div>
+      <br><br><br>
+      <input type="submit" name="Book_Hall" value="Book Now" class="button">
       </div>
 <h1>
 

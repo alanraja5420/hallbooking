@@ -1,20 +1,15 @@
 <?php
 
+$id=$_SESSION['user'];
 include("..\database\connection.php");
-
-$query = "SELECT * FROM booking_form WHERE Department_Name AND (status = 3 OR status = 1)";
+$query = "SELECT * FROM booking_form where status=1 or status=3 or status=2 and ";
 $result = mysqli_query($conn, $query);
-
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
   <title>Hall Booking Admin Panel</title>
-  <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-        
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -66,7 +61,8 @@ $result = mysqli_query($conn, $query);
       color: white;
       border: none;
     }
-    .pending-button {
+    /* Styles for Action Buttons */
+.pending-button {
     background-color: #ffc107; /* Light yellow */
     color: black;
     padding: 6px 12px;
@@ -87,15 +83,15 @@ $result = mysqli_query($conn, $query);
     border-radius: 4px;
 }
 
+  
+    
     </style>
 </head>
-
-
-
 <body>
 <?php include "Sidebar.php"?>
 <div class="main--content">
 <?php include 'header.php'?>
+    <div class="card-container">
   <h1>Hall Booking Status</h1>
 
   <table>
@@ -130,8 +126,7 @@ $result = mysqli_query($conn, $query);
     <?php endif; ?>
 </td>
       
-
-        </td>
+        
       </tr>
     <?php
     }
@@ -140,5 +135,7 @@ $result = mysqli_query($conn, $query);
 
   <!-- JavaScript code to handle approval and rejection -->
   <!-- ... Your JavaScript code ... -->
+    </div>
+</div>
 </body>
 </html>
