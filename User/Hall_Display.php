@@ -25,6 +25,10 @@
                 ['title' => 'MARINE HALL', 'image' => '../Asset/bac1.jpg'],
                 ['title' => 'MCA SEMINAR HALL', 'image' => '../Asset/bac4.jpg'],
                 ['title' => 'COMMUNITY CENTER HALL', 'image' => '../Asset/bac5.jpg'],
+                ['title' => 'LAWLEY HALL',  'image' => '../Asset/sjc.png'],
+                ['title' => 'KP JOSEPH HALL', 'image' => '../Asset/image.jpeg'],
+                ['title' => 'SAIL AUDITORIUM', 'image' => '../Asset/sjc2.jpeg'],
+                ['title' => 'JUBLIE HALL', 'image' => '../Asset/sjc3.jpeg'],
             ];
 
             // Loop through the data and create cards dynamically
