@@ -127,3 +127,59 @@ border-radius: 50%;
 .search--box i:hover {
     transform: scale(1.2);
 }
+
+
+/* card container */
+
+.card--container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.card--wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main--title{
+    color: rgba(113,99,186,255);
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.all--card{
+    background: rgb(229,223,223);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+.all--card:hover {
+
+    transform: translateY(-5px);
+}
+
+.card--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.count{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 12px;
+    font-weight: 200;
+}
+.count-value{
+    font-size: 24px;
+    font-family: "Courier New",Courier,monospace;
+    font-weight: 600;
+}

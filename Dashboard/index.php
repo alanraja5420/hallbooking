@@ -72,15 +72,29 @@
         <i class="fa-solid fa-search"></i>
         <input type="text" placeholder="search"/>
         </div>
-        <?php
+
+        <?php/
             
             $name = $_SESSION['user'];
 
         ?>
-        <p><?php echo $name?></p>
+        
         <img src="./sjc.png" alt=""/>
         </div>
-        </div> 
+        </div>
+        <div class="card--container">
+         <h3 class="main--title">Today's Data</h3>
+            <div calss="card--wrapper">
+            <div calss="all--card"> 
+            <div calss="card--header">
+            <div class="count">   
+                <span class="title"> All Booking </span>
+                <span class="count-value"> 5 </span>     
+        </div>
+        </div>
+            </div>
+            </div>
+            </div> 
     </div>
 </body>
 
