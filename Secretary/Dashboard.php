@@ -74,6 +74,26 @@
        
     </div>
     </div> 
+    <div class="dash_detail">
+        <h2>Approved<h2>
+        <h1>2</h1>
+        <a href="../Secretary/Request.php">More info</a>
+    </div>
+    <div class="dash_detail1">
+        <h2>Approved<h2>
+        <h1>2</h1>
+        <a href="../Secretary/Status.php">More info</a>
+    </div>
+    <div class="dash_detail2">
+        <h2>Rejected<h2>
+        <h1>4</h1>
+        <a href="../Secretary/Status.php">More info</a>
+    </div>
+    <div class="dash_detail3">
+        <h2>Bending<h2>
+        <h1>5</h1>
+        <a href="../Secretary/Status.php">More info</a>
+    </div>
     </div>
 
 </body>
