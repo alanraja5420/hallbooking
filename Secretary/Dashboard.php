@@ -2,6 +2,30 @@
     session_start();
     if($_SESSION['user']){
 ?>
+<?php
+include("..\database\connection.php");
+$query = "SELECT COUNT(*) FROM booking_form WHERE status";
+$result = mysqli_query($conn, $query);
+$count = mysqli_fetch_array($result)[0];
+?>
+<?php
+include("..\database\connection.php");
+$query = "SELECT COUNT(*) FROM booking_form WHERE status =1";
+$result = mysqli_query($conn, $query);
+$count1 = mysqli_fetch_array($result)[0];
+?>
+<?php
+include("..\database\connection.php");
+$query = "SELECT COUNT(*) FROM booking_form WHERE status =2";
+$result = mysqli_query($conn, $query);
+$count2 = mysqli_fetch_array($result)[0];
+?>
+<?php
+include("..\database\connection.php");
+$query = "SELECT COUNT(*) FROM booking_form WHERE status =3";
+$result = mysqli_query($conn, $query);
+$count3 = mysqli_fetch_array($result)[0];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,23 +99,23 @@
     </div>
     </div> 
     <div class="dash_detail">
-        <h2>Approved<h2>
-        <h1>2</h1>
+        <h2>Request<h2>
+        <h1><?php echo $count; ?></h1>
         <a href="../Secretary/Request.php">More info</a>
     </div>
     <div class="dash_detail1">
         <h2>Approved<h2>
-        <h1>2</h1>
+        <h1><?php echo $count1; ?></h1>
         <a href="../Secretary/Status.php">More info</a>
     </div>
     <div class="dash_detail2">
         <h2>Rejected<h2>
-        <h1>4</h1>
+        <h1><?php echo $count2; ?></h1>
         <a href="../Secretary/Status.php">More info</a>
     </div>
     <div class="dash_detail3">
         <h2>Bending<h2>
-        <h1>5</h1>
+        <h1><?php echo $count3; ?></h1>
         <a href="../Secretary/Status.php">More info</a>
     </div>
     </div>
