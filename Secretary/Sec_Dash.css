@@ -1,6 +1,8 @@
+
 .dash_detail1,
 .dash_detail2,
-.dash_detail3 {
+.dash_detail3,
+.dash_detail {
     display: inline-block;
     width: 300px;
     margin: 10px;
@@ -10,7 +12,7 @@
     text-align: center;
     color: #333;
 }
-
+.dash_detail,
 .dash_detail1 {
     background-color: #f9f9f9;
     border: 4px solid #ddd;
@@ -26,6 +28,11 @@
     border: 4px solid #bbb;
 }
 
+.dash_detail{
+    margin-top: -10px;
+    font-size: 26px;
+    color: #5fc902;
+}
 .dash_detail1 h2{
     margin-top: 20px;
     font-size: 26px;
@@ -42,12 +49,17 @@
     color: #f59220;
 }
 
+.dash_detail{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
 .dash_detail1 h1,
 .dash_detail2 h1,
 .dash_detail3 h1 {
     margin-bottom: 15px;
     font-size: 30px;
 }
+
 
 .dash_detail1 a,
 .dash_detail2 a,
