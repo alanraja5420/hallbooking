@@ -4,12 +4,6 @@
 ?>
 <?php
 include("..\database\connection.php");
-$query = "SELECT COUNT(*) FROM booking_form WHERE status";
-$result = mysqli_query($conn, $query);
-$count = mysqli_fetch_array($result)[0];
-?>
-<?php
-include("..\database\connection.php");
 $query = "SELECT COUNT(*) FROM booking_form WHERE status =1";
 $result = mysqli_query($conn, $query);
 $count1 = mysqli_fetch_array($result)[0];
