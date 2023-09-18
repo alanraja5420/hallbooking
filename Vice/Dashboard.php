@@ -26,7 +26,7 @@ $count3 = mysqli_fetch_array($result)[0];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="../Vice/style.css"/>
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
@@ -83,17 +83,17 @@ $count3 = mysqli_fetch_array($result)[0];
     <div class="dash_detail1">
         <h2>Approved<h2>
         <h1><?php echo $count1; ?></h1>
-        <a href="../Secretary/Status.php">More info</a>
+        <a href="../Vice/Status.php">More info</a>
     </div>
     <div class="dash_detail2">
         <h2>Rejected<h2>
         <h1><?php echo $count2; ?></h1>
-        <a href="../Secretary/Status.php">More info</a>
+        <a href="../Vice/Status.php">More info</a>
     </div>
     <div class="dash_detail3">
         <h2>Bending<h2>
         <h1><?php echo $count3; ?></h1>
-        <a href="../Secretary/Status.php">More info</a>
+        <a href="../Vice/Status.php">More info</a>
     </div>
     </div>
 </body>
