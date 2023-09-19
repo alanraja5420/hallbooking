@@ -99,8 +99,8 @@ $count3 = mysqli_fetch_array($result)[0];
        
     </div>
     </div> 
-    <div class="dash_detail">
-        <h2>Request<h2>
+    <div class="dash_detail4">
+        <h2>Requests<h2>
         <h1><?php echo $count; ?></h1>
         <a href="../Secretary/Request.php">More info</a>
     </div>
@@ -115,7 +115,7 @@ $count3 = mysqli_fetch_array($result)[0];
         <a href="../Secretary/Status.php">More info</a>
     </div>
     <div class="dash_detail3">
-        <h2>Bending<h2>
+        <h2>Pending<h2>
         <h1><?php echo $count3; ?></h1>
         <a href="../Secretary/Status.php">More info</a>
     </div>
