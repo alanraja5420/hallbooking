@@ -1,8 +1,6 @@
 <?php
-
-$id=$_SESSION['user'];
 include("..\database\connection.php");
-$query = "SELECT * FROM booking_form where status=1 or status=3 or status=2 and ";
+$query = "SELECT * FROM booking_form where status=1 or status=3 or status=2";
 $result = mysqli_query($conn, $query);
 ?>
 
