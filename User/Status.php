@@ -1,6 +1,6 @@
 <?php
 include("..\database\connection.php");
-$query = "SELECT * FROM booking_form where status=1 or status=3 or status=2";
+$query = "SELECT * FROM booking_form WHERE Department_Name='Computer Science' AND (status=1 OR status=3 OR status=2)";
 $result = mysqli_query($conn, $query);
 ?>
 
