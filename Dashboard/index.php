@@ -73,7 +73,7 @@
         <input type="text" placeholder="search"/>
         </div>
 
-        <?php/
+        <?php
             
             $name = $_SESSION['user'];
 
@@ -83,7 +83,7 @@
         </div>
         </div>
         <div class="card--container">
-         <h3 class="main--title">Today's Data</h3>
+        <h3 class="main--title">Today's Data</h3>
             <div calss="card--wrapper">
             <div calss="all--card"> 
             <div calss="card--header">
